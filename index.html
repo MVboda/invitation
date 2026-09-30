@@ -1259,13 +1259,14 @@
 
     .venue-video-wrap{
       position:relative;
-      width:100%;
-      aspect-ratio:16/9;
+      width:min(100%, 430px);
+      aspect-ratio:9/16;
       overflow:hidden;
       border-radius:var(--radius);
       border:1px solid rgba(142,100,35,.10);
       background:#E8DED2;
       box-shadow:var(--shadow);
+      margin:0 auto;
     }
 
     .venue-video{
@@ -1274,6 +1275,8 @@
       width:100%;
       height:100%;
       border:0;
+      object-fit:cover;
+      display:block;
     }
 
     .venue-video-card .venue-ig-link{
@@ -1294,6 +1297,38 @@
 
     .venue-ig-icon svg{
       display:block;
+    }
+
+  
+    /* Intro/story block refinements */
+    .intro h2{
+      font-size:clamp(2.5rem,5.6vw,4.6rem) !important;
+      line-height:.98 !important;
+      max-width:680px;
+    }
+
+    .intro .lead{
+      font-size:clamp(.98rem,1.65vw,1.18rem) !important;
+      line-height:1.62 !important;
+      max-width:690px;
+    }
+
+    /* Smaller venue heading */
+    .venue-card-compact h3{
+      font-size:clamp(2rem,4.2vw,3.2rem) !important;
+      line-height:1 !important;
+    }
+
+    @media (max-width:800px){
+      .intro h2{
+        font-size:clamp(2.35rem,10.5vw,3.8rem) !important;
+      }
+      .intro .lead{
+        font-size:.98rem !important;
+      }
+      .venue-card-compact h3{
+        font-size:clamp(2rem,9vw,2.9rem) !important;
+      }
     }
 
   </style>
@@ -1364,7 +1399,7 @@ const I18N = {
     
     venueEyebrow: "",
     venueTitle: "See you in Granada",
-    venueText: "Cortijo de las Mozas. Open the map below for the exact location and directions.",
+    venueText: "Open the map below for the exact location and directions.",
     directions: "Open in Google Maps",
     dressTitle: "Dress code",
     dressText: "Garden elegant. Think warm, natural tones that feel at home under the Andalusian sun.",
@@ -1403,7 +1438,7 @@ const I18N = {
     
     venueEyebrow: "",
     venueTitle: "Nos vemos en Granada",
-    venueText: "Cortijo de las Mozas. Abre el mapa para ver la ubicación exacta y cómo llegar.",
+    venueText: "Abre el mapa para ver la ubicación exacta y cómo llegar.",
     directions: "Abrir en Google Maps",
     dressTitle: "Dress code",
     dressText: "Garden elegant. Tonos cálidos y naturales que encajen con el sol andaluz.",
@@ -1442,7 +1477,7 @@ const I18N = {
     
     venueEyebrow: "",
     venueTitle: "Nos vemos em Granada",
-    venueText: "Cortijo de las Mozas. Abra o mapa para ver a localização exata e como chegar.",
+    venueText: "Abra o mapa para ver a localização exata e como chegar.",
     directions: "Abrir no Google Maps",
     dressTitle: "Dress code",
     dressText: "Garden elegant. Tons quentes e naturais que combinem com o sol da Andaluzia.",
@@ -1533,22 +1568,22 @@ const I18N = {
   <section>
     <div class="wrap intro">
       <div class="reveal">
-        <div class="eyebrow intro-monogram">M+V</div>
+        <div class="eyebrow intro-monogram">M&amp;V</div>
         <h2 data-i18n="introTitle"></h2>
         <p class="lead" data-i18n="introText"></p>
       </div>
       <div class="photo-card reveal venue-video-card">
         <div class="venue-video-wrap">
-          <iframe
+          <video
             class="venue-video"
-            src="https://www.youtube-nocookie.com/embed/XgEsdqC1vBk?start=13&rel=0"
-            title="Cortijo de las Mozas"
-            loading="lazy"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-          </iframe>
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="Cortijo de las Mozas">
+            <source src="cortijo.mp4" type="video/mp4">
+          </video>
         </div>
         <a class="venue-ig-link" href="https://www.instagram.com/cortijolasmozas?stkn=MWVxbHl5M3hocTJqZw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Cortijo de las Mozas">
           <span class="venue-ig-icon" aria-hidden="true">
@@ -1605,11 +1640,11 @@ const I18N = {
           <div><h3 data-i18n="cocktail"></h3></div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-time">21:15</div>
+          <div class="timeline-time">21:00</div>
           <div><h3 data-i18n="dinner"></h3></div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-time">23:15</div>
+          <div class="timeline-time">22:30</div>
           <div><h3 data-i18n="party"></h3></div>
         </div>
       </div></div>
