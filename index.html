@@ -1330,9 +1330,8 @@
 
   
     .venue-video-duo{
-      display:grid;
-      grid-template-columns:minmax(0,1.5fr) minmax(200px,.5fr);
-      gap:22px;
+      display:flex;
+      justify-content:center;
       align-items:center;
     }
 
@@ -1370,8 +1369,8 @@
 
     @media (max-width:800px){
       .venue-video-duo{
-        grid-template-columns:1fr;
-        gap:16px;
+        display:flex;
+        justify-content:center;
       }
 
       .venue-video-local{
@@ -1623,20 +1622,7 @@ const I18N = {
       </div>
       <div class="photo-card reveal venue-video-card">
         <div class="venue-video-duo">
-          <div class="venue-video-wrap venue-video-youtube">
-            <iframe
-              class="venue-video"
-              src="https://www.youtube-nocookie.com/embed/XgEsdqC1vBk?start=13&rel=0"
-              title="Cortijo de las Mozas — YouTube"
-              loading="lazy"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
-          </div>
-
-          <div class="venue-video-wrap venue-video-local">
+<div class="venue-video-wrap venue-video-local">
             <video
               class="venue-video"
               autoplay
