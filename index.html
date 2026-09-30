@@ -1399,6 +1399,44 @@
       }
     }
 
+  
+    .venue-video-card{
+      display:block !important;
+    }
+
+    .venue-video-duo{
+      display:block !important;
+      width:min(100%, 270px) !important;
+      margin:0 auto !important;
+    }
+
+    .venue-video-local{
+      display:block !important;
+      width:100% !important;
+      max-width:270px !important;
+      aspect-ratio:9/16 !important;
+      margin:0 auto !important;
+    }
+
+    .venue-video-card .venue-ig-link{
+      display:flex !important;
+      width:min(100%, 270px) !important;
+      margin:14px auto 0 !important;
+      justify-content:center !important;
+      text-align:center !important;
+    }
+
+    @media (max-width:800px){
+      .venue-video-duo,
+      .venue-video-card .venue-ig-link{
+        width:min(82vw, 300px) !important;
+      }
+
+      .venue-video-local{
+        max-width:300px !important;
+      }
+    }
+
   </style>
 </head>
 
