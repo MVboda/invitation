@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -1147,6 +1147,36 @@
       }
     }
 
+  
+    /* Boss edits: elegant italic headings */
+    h1,h2,h3,
+    .hero h2,
+    .lang-card h1,
+    .section-title,
+    .venue-card h3,
+    .rsvp h2,
+    footer .monogram{
+      font-family:"Cormorant Garamond", serif !important;
+      font-style:italic;
+      font-weight:500;
+      letter-spacing:-.02em;
+    }
+
+    /* Replace green text accents with warm beige */
+    .eyebrow,
+    .count-label,
+    .timeline-time{
+      color:#C8AE86 !important;
+    }
+
+    .intro-monogram{
+      color:#C8AE86 !important;
+    }
+
+    .rsvp .eyebrow{
+      color:#E2C79D !important;
+    }
+
   </style>
 </head>
 
@@ -1160,7 +1190,7 @@
 <script>
 const WEDDING = {
   couple: "Manoelle & Viktor",
-  dateISO: "2027-08-14T20:00:00+02:00",
+  dateISO: "2027-08-14T19:00:00+02:00",
   dateDisplay: "14 · 08 · 2027",
   city: "Granada, Spain",
 
@@ -1210,7 +1240,7 @@ const I18N = {
     dinnerDesc: "Dinner together under the lights.",
     special: "Live music, first dance & cake",
     specialDesc: "Live music, our first dance and the wedding cake.",
-    party: "Party & open bar",
+    party: "Party",
     partyDesc: "Music, dancing and an open bar into the night.",
     
     venueEyebrow: "The place",
@@ -1249,7 +1279,7 @@ const I18N = {
     dinnerDesc: "Cena juntos bajo las luces.",
     special: "Música en directo, primer baile y tarta",
     specialDesc: "Música en directo, nuestro primer baile y la tarta de boda.",
-    party: "Fiesta y barra libre",
+    party: "Fiesta",
     partyDesc: "Música, baile y barra libre hasta bien entrada la noche.",
     
     venueEyebrow: "El lugar",
@@ -1288,7 +1318,7 @@ const I18N = {
     dinnerDesc: "Jantar juntos sob as luzes.",
     special: "Música ao vivo, primeira dança e bolo",
     specialDesc: "Música ao vivo, nossa primeira dança e o bolo de casamento.",
-    party: "Festa e open bar",
+    party: "Festa",
     partyDesc: "Música, dança e open bar noite adentro.",
     
     venueEyebrow: "O lugar",
@@ -1327,7 +1357,7 @@ const I18N = {
     dinnerDesc: "Спільна вечеря під гірляндами.",
     special: "Жива музика, перший танець і торт",
     specialDesc: "Жива музика, наш перший танець і весільний торт.",
-    party: "Вечірка та open bar",
+    party: "Вечірка",
     partyDesc: "Музика, танці та open bar до пізньої ночі.",
     
     venueEyebrow: "Місце",
@@ -1428,30 +1458,26 @@ const I18N = {
 
       <div class="timeline reveal">
         <div class="timeline-item">
+          <div class="timeline-time">18:30</div>
+          <div><h3 data-i18n="arrival"></h3></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div><h3 data-i18n="ceremony"></h3></div>
+        </div>
+        <div class="timeline-item">
           <div class="timeline-time">19:30</div>
-          <div><h3 data-i18n="arrival"></h3><p data-i18n="arrivalDesc"></p></div>
+          <div><h3 data-i18n="cocktail"></h3></div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-time">20:00</div>
-          <div><h3 data-i18n="ceremony"></h3><p data-i18n="ceremonyDesc"></p></div>
+          <div class="timeline-time">21:15</div>
+          <div><h3 data-i18n="dinner"></h3></div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-time">20:30</div>
-          <div><h3 data-i18n="cocktail"></h3><p data-i18n="cocktailDesc"></p></div>
+          <div class="timeline-time">23:15</div>
+          <div><h3 data-i18n="party"></h3></div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-time">22:15</div>
-          <div><h3 data-i18n="dinner"></h3><p data-i18n="dinnerDesc"></p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">23:45</div>
-          <div><h3 data-i18n="special"></h3><p data-i18n="specialDesc"></p></div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">00:15</div>
-          <div><h3 data-i18n="party"></h3><p data-i18n="partyDesc"></p></div>
-        </div>
-      </div>
+      </div></div>
     </div>
   </section>
 
